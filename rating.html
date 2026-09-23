@@ -3,23 +3,14 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Okay Priya... Tell Me Honestly 🥺</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -30,7 +21,6 @@ rel="stylesheet">
 }
 
 body{
-
     min-height:100vh;
 
     font-family:Poppins,sans-serif;
@@ -43,32 +33,24 @@ body{
     color:#542c3c;
 
     overflow-x:hidden;
-
 }
 
 
-/* background */
+/* =========================
+   FLOATING HEARTS
+========================= */
 
 .backgroundHeart{
-
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
     overflow:hidden;
-
 }
 
 .heart{
-
     position:absolute;
-
     bottom:-40px;
-
     animation:up linear forwards;
-
 }
 
 @keyframes up{
@@ -90,7 +72,9 @@ body{
 }
 
 
-/* layout */
+/* =========================
+   MAIN
+========================= */
 
 .wrapper{
 
@@ -145,7 +129,9 @@ body{
 }
 
 
-/* top */
+/* =========================
+   HEADING
+========================= */
 
 .small{
 
@@ -192,7 +178,9 @@ h1 span{
 }
 
 
-/* question */
+/* =========================
+   QUESTION BOX
+========================= */
 
 .question{
 
@@ -231,7 +219,9 @@ h1 span{
 }
 
 
-/* slider */
+/* =========================
+   SLIDERS
+========================= */
 
 input[type=range]{
 
@@ -252,7 +242,6 @@ input[type=range]{
     outline:none;
 
 }
-
 
 input[type=range]::-webkit-slider-thumb{
 
@@ -275,6 +264,21 @@ input[type=range]::-webkit-slider-thumb{
 
 }
 
+input[type=range]::-moz-range-thumb{
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:white;
+
+    border:5px solid #d75b82;
+
+    cursor:pointer;
+
+}
 
 .scale{
 
@@ -290,9 +294,6 @@ input[type=range]::-webkit-slider-thumb{
 
 }
 
-
-/* reaction */
-
 .reaction{
 
     min-height:32px;
@@ -306,7 +307,105 @@ input[type=range]::-webkit-slider-thumb{
 }
 
 
-/* submit */
+/* =========================
+   MESSAGE BOX
+========================= */
+
+.message-box{
+
+    text-align:left;
+
+}
+
+.message-hint{
+
+    color:#765465;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    margin:10px 0 16px;
+
+}
+
+.message-hint strong{
+
+    color:#a94d6d;
+
+}
+
+.heart-message{
+
+    width:100%;
+
+    min-height:140px;
+
+    resize:vertical;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:20px;
+
+    padding:17px;
+
+    font-family:Poppins,sans-serif;
+
+    font-size:13px;
+
+    line-height:1.7;
+
+    color:#5d3445;
+
+    background:rgba(255,255,255,.65);
+
+    border:1px solid rgba(255,255,255,.9);
+
+    box-shadow:
+    inset 0 2px 10px rgba(150,60,90,.05);
+
+    transition:.3s;
+
+}
+
+.heart-message::placeholder{
+
+    color:#b28a99;
+
+}
+
+.heart-message:focus{
+
+    border-color:rgba(207,82,123,.35);
+
+    box-shadow:
+    0 0 0 4px rgba(207,82,123,.08),
+    inset 0 2px 10px rgba(150,60,90,.05);
+
+}
+
+.message-count{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:8px;
+
+    padding:0 4px;
+
+    color:#a07888;
+
+    font-size:10px;
+
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
 
 .submit{
 
@@ -349,8 +448,20 @@ input[type=range]::-webkit-slider-thumb{
 
 }
 
+.submit:disabled{
 
-/* result */
+    opacity:.7;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+
+/* =========================
+   RESULT
+========================= */
 
 .result{
 
@@ -362,8 +473,7 @@ input[type=range]::-webkit-slider-thumb{
 
     border-radius:28px;
 
-    background:
-    rgba(255,255,255,.6);
+    background:rgba(255,255,255,.6);
 
     animation:result .5s ease;
 
@@ -416,7 +526,9 @@ input[type=range]::-webkit-slider-thumb{
 }
 
 
-/* stats */
+/* =========================
+   STATS
+========================= */
 
 .stats{
 
@@ -447,7 +559,9 @@ input[type=range]::-webkit-slider-thumb{
 }
 
 
-/* reset */
+/* =========================
+   RESET
+========================= */
 
 .reset{
 
@@ -467,187 +581,320 @@ input[type=range]::-webkit-slider-thumb{
 
 }
 
-/* HEART MESSAGE BOX */
 
-.message-box{
-    text-align:left;
-}
+/* =========================
+   WARNING POPUP
+========================= */
 
-.message-hint{
-    color:#765465;
-    font-size:12px;
-    line-height:1.7;
-    margin:10px 0 16px;
-}
+.warningPopup{
 
-.message-hint strong{
-    color:#a94d6d;
-}
+    position:fixed;
 
-.heart-message{
+    inset:0;
 
-    width:100%;
-    min-height:140px;
+    display:none;
 
-    resize:vertical;
+    align-items:center;
 
-    border:none;
-    outline:none;
+    justify-content:center;
 
-    border-radius:20px;
+    padding:20px;
 
-    padding:17px;
+    background:rgba(70,20,40,.28);
 
-    font-family:Poppins,sans-serif;
+    backdrop-filter:blur(9px);
 
-    font-size:13px;
-
-    line-height:1.7;
-
-    color:#5d3445;
-
-    background:rgba(255,255,255,.65);
-
-    border:1px solid rgba(255,255,255,.9);
-
-    box-shadow:
-    inset 0 2px 10px rgba(150,60,90,.05);
-
-    transition:.3s;
-}
-
-.heart-message::placeholder{
-    color:#b28a99;
-}
-
-.heart-message:focus{
-
-    border-color:rgba(207,82,123,.35);
-
-    box-shadow:
-    0 0 0 4px rgba(207,82,123,.08),
-    inset 0 2px 10px rgba(150,60,90,.05);
+    z-index:9999;
 
 }
 
-.message-count{
+.warningPopup.show{
 
     display:flex;
 
-    justify-content:space-between;
+}
 
-    margin-top:8px;
+.warningCard{
 
-    padding:0 4px;
+    width:min(420px,92vw);
 
-    color:#a07888;
+    padding:32px 25px;
 
-    font-size:10px;
+    text-align:center;
+
+    border-radius:30px;
+
+    background:rgba(255,250,250,.93);
+
+    border:1px solid rgba(255,255,255,.95);
+
+    box-shadow:
+    0 30px 80px rgba(70,20,40,.25);
+
+    animation:warningPop .35s ease;
 
 }
 
-@media (max-width: 768px){
+.warningEmoji{
 
-    .heart-message{
-    min-height:130px;
-    font-size:12px;
+    font-size:55px;
+
+    margin-bottom:8px;
+
 }
 
-.message-hint{
-    font-size:11px;
+.warningCard h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:42px;
+
+    color:#71364d;
+
 }
 
-    body{
-        overflow-y:auto;
+.warningCard p{
+
+    color:#765465;
+
+    font-size:13px;
+
+    line-height:1.8;
+
+    margin:12px 0 22px;
+
+}
+
+.warningCard p strong{
+
+    color:#a94d6d;
+
+}
+
+.warningCard button{
+
+    border:none;
+
+    padding:13px 23px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(135deg,#f184a4,#c94d77);
+
+    color:white;
+
+    font-family:inherit;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 25px rgba(201,77,119,.3);
+
+    transition:.3s;
+
+}
+
+.warningCard button:hover{
+
+    transform:translateY(-3px) scale(1.03);
+
+}
+
+@keyframes warningPop{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8) translateY(15px);
+
     }
 
+    to{
+
+        opacity:1;
+
+        transform:scale(1) translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+
     .wrapper{
+
         min-height:100svh;
+
         padding:16px 12px;
+
         align-items:flex-start;
+
     }
 
     .card{
+
         width:100%;
+
         padding:28px 16px;
+
         border-radius:28px;
+
         margin:10px 0;
+
     }
 
     h1{
-        font-size:clamp(48px, 14vw, 68px);
+
+        font-size:clamp(48px,14vw,68px);
+
         line-height:.85;
+
     }
 
     .description{
+
         font-size:13px;
+
         line-height:1.7;
+
     }
 
     .question{
+
         padding:17px 14px;
+
         margin-top:12px;
+
     }
 
     .questionTitle{
+
         font-size:13px;
+
         gap:10px;
+
         text-align:left;
+
     }
 
     .score{
+
         font-size:20px;
+
         white-space:nowrap;
+
     }
 
     .reaction{
+
         font-size:12px;
+
     }
 
     .submit{
+
         font-size:14px;
+
         padding:15px;
+
     }
 
     .result{
+
         padding:22px 15px;
+
     }
 
     .resultEmoji{
+
         font-size:50px;
+
     }
 
     .result h2{
+
         font-size:36px;
+
     }
 
     .stats{
+
         gap:7px;
+
     }
 
     .stat{
+
         font-size:11px;
+
         padding:8px 11px;
+
+    }
+
+    .heart-message{
+
+        min-height:130px;
+
+        font-size:12px;
+
+    }
+
+    .message-hint{
+
+        font-size:11px;
+
     }
 
 }
 
-@media (max-width: 400px){
+
+/* EXTRA SMALL */
+
+@media (max-width:400px){
 
     .card{
+
         padding:24px 12px;
+
     }
 
     h1{
+
         font-size:50px;
+
     }
 
     .questionTitle{
+
         font-size:12px;
+
     }
 
     .score{
+
         font-size:18px;
+
+    }
+
+    .warningCard{
+
+        padding:28px 18px;
+
+    }
+
+    .warningCard h2{
+
+        font-size:36px;
+
     }
 
 }
@@ -660,8 +907,12 @@ input[type=range]::-webkit-slider-thumb{
 <body>
 
 
+<!-- FLOATING HEARTS -->
+
 <div class="backgroundHeart" id="hearts"></div>
 
+
+<!-- MAIN -->
 
 <div class="wrapper">
 
@@ -697,8 +948,9 @@ I promise main result dekh ke argue nahi karunga 😭
 </p>
 
 
-
-<!-- ANGER -->
+<!-- =========================
+     ANGER
+========================= -->
 
 <div class="question">
 
@@ -706,11 +958,8 @@ I promise main result dekh ke argue nahi karunga 😭
 
 <span>😤 Kitna gussa ho mujhse?</span>
 
-<span class="score"
-id="angerScore">
-
+<span class="score" id="angerScore">
 5/10
-
 </span>
 
 </div>
@@ -721,7 +970,8 @@ type="range"
 id="anger"
 min="1"
 max="10"
-value="5">
+value="5"
+>
 
 
 <div class="scale">
@@ -733,9 +983,7 @@ value="5">
 </div>
 
 
-<div
-class="reaction"
-id="angerReaction">
+<div class="reaction" id="angerReaction">
 
 Hmm... thoda gussa hai 👀
 
@@ -744,8 +992,9 @@ Hmm... thoda gussa hai 👀
 </div>
 
 
-
-<!-- LOVE -->
+<!-- =========================
+     LOVE
+========================= -->
 
 <div class="question">
 
@@ -753,11 +1002,8 @@ Hmm... thoda gussa hai 👀
 
 <span>❤️ Kitna love karti ho?</span>
 
-<span class="score"
-id="loveScore">
-
+<span class="score" id="loveScore">
 8/10
-
 </span>
 
 </div>
@@ -768,7 +1014,8 @@ type="range"
 id="love"
 min="1"
 max="10"
-value="8">
+value="8"
+>
 
 
 <div class="scale">
@@ -780,9 +1027,7 @@ value="8">
 </div>
 
 
-<div
-class="reaction"
-id="loveReaction">
+<div class="reaction" id="loveReaction">
 
 Okayyy... hope abhi bhi love bacha hai 🥺
 
@@ -791,8 +1036,9 @@ Okayyy... hope abhi bhi love bacha hai 🥺
 </div>
 
 
-
-<!-- SORRY -->
+<!-- =========================
+     SORRY
+========================= -->
 
 <div class="question">
 
@@ -800,11 +1046,8 @@ Okayyy... hope abhi bhi love bacha hai 🥺
 
 <span>🥺 Meri sorry kitni accept hui?</span>
 
-<span class="score"
-id="sorryScore">
-
+<span class="score" id="sorryScore">
 5/10
-
 </span>
 
 </div>
@@ -815,7 +1058,8 @@ type="range"
 id="sorry"
 min="1"
 max="10"
-value="5">
+value="5"
+>
 
 
 <div class="scale">
@@ -827,9 +1071,7 @@ value="5">
 </div>
 
 
-<div
-class="reaction"
-id="sorryReaction">
+<div class="reaction" id="sorryReaction">
 
 Negotiation chal rahi hai 😭
 
@@ -837,71 +1079,96 @@ Negotiation chal rahi hai 😭
 
 </div>
 
-<!-- MESSAGE FROM HEART -->
+
+<!-- =========================
+     HEART MESSAGE
+========================= -->
 
 <div class="question message-box">
 
-    <div class="questionTitle">
-        <span>💌 Ab dil ki baat bhi likh do</span>
-    </div>
+<div class="questionTitle">
 
-    <p class="message-hint">
-        Humne tumhare liye itna sa effort kiya hai... 🥺
-        <br>
-        Tum bhi thoda sa effort karke jo dil mein hai,
-        woh apne mann se likh do.
-        <br>
-        <strong>Achha ho, bura ho, gussa ho, complaint ho —
-        jo bhi hai, honestly likhna. ❤️</strong>
-    </p>
-
-    <textarea
-        id="heartMessage"
-        class="heart-message"
-        placeholder="Jo dil mein hai bina soche likh do... 🥺❤️"
-        maxlength="1000"
-    ></textarea>
-
-    <div class="message-count">
-        <span>💗 Your words matter</span>
-        <span>
-            <span id="messageCount">0</span>/1000
-        </span>
-    </div>
+<span>💌 Ab dil ki baat bhi likh do</span>
 
 </div>
 
 
+<p class="message-hint">
+
+Humne tumhare liye itna sa effort kiya hai... 🥺
+
+<br>
+
+Tum bhi thoda sa effort karke jo dil mein hai,
+woh apne mann se likh do.
+
+<br>
+
+<strong>
+Achha ho, bura ho, gussa ho, complaint ho —
+jo bhi hai, honestly likhna. ❤️
+</strong>
+
+</p>
+
+
+<textarea
+id="heartMessage"
+class="heart-message"
+placeholder="Jo dil mein hai bina soche likh do... 🥺❤️"
+maxlength="1000"
+></textarea>
+
+
+<div class="message-count">
+
+<span>
+💗 Your words matter
+</span>
+
+<span>
+<span id="messageCount">0</span>/1000
+</span>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     SUBMIT
+========================= -->
+
 <button
 class="submit"
-onclick="submitRating()">
+id="submitButton"
+onclick="submitRating()"
+>
 
 💌 Submit My Honest Rating
 
 </button>
 
 
-
-<!-- RESULT -->
+<!-- =========================
+     RESULT
+========================= -->
 
 <div
 class="result"
-id="result">
-
+id="result"
+>
 
 <div
 class="resultEmoji"
-id="resultEmoji">
-
+id="resultEmoji"
+>
 🥺❤️
-
 </div>
 
 
 <h2 id="resultTitle">
-
 Rating received!
-
 </h2>
 
 
@@ -942,7 +1209,8 @@ Tumne honestly rating de di...
 
 <button
 class="reset"
-onclick="resetRating()">
+onclick="resetRating()"
+>
 
 ↻ Change my rating
 
@@ -957,50 +1225,105 @@ onclick="resetRating()">
 </div>
 
 
+<!-- =========================
+     WARNING POPUP
+========================= -->
+
+<div
+class="warningPopup"
+id="warningPopup"
+>
+
+<div class="warningCard">
+
+<div class="warningEmoji">
+🥺👉👈
+</div>
+
+
+<h2>
+Wait Babe...
+</h2>
+
+
+<p>
+
+Pehle thoda sa dil ki baat likh do ❤️
+
+<br>
+
+Achha ho, bura ho, gussa ho —
+
+<br>
+
+<strong>
+jo bhi hai, honestly likh do.
+</strong>
+
+</p>
+
+
+<button onclick="closeWarning()">
+
+Okay, I'll write 🥺
+
+</button>
+
+</div>
+
+</div>
+
 
 <script>
 
 
-/* Floating hearts */
+/* =========================
+   FLOATING HEARTS
+========================= */
 
-const heartContainer=
+const heartContainer =
 document.getElementById("hearts");
 
-
-const heartEmojis=[
-    "❤️","💗","💕",
-    "💖","🥺","✨",
-    "🫶","🌸"
+const heartEmojis = [
+    "❤️",
+    "💗",
+    "💕",
+    "💖",
+    "🥺",
+    "✨",
+    "🫶",
+    "🌸"
 ];
 
 
 function createHeart(){
 
-    const heart=
+    const heart =
     document.createElement("span");
 
-    heart.className="heart";
+    heart.className = "heart";
 
-    heart.innerText=
+    heart.innerText =
     heartEmojis[
         Math.floor(
-            Math.random()*heartEmojis.length
+            Math.random() *
+            heartEmojis.length
         )
     ];
 
-    heart.style.left=
-    Math.random()*100+"%";
+    heart.style.left =
+    Math.random() * 100 + "%";
 
-    heart.style.fontSize=
-    12+Math.random()*20+"px";
+    heart.style.fontSize =
+    12 + Math.random() * 20 + "px";
 
-    heart.style.animationDuration=
-    6+Math.random()*7+"s";
+    heart.style.animationDuration =
+    6 + Math.random() * 7 + "s";
 
     heartContainer.appendChild(heart);
 
     setTimeout(
-        ()=>heart.remove(),
+        () => heart.remove(),
         14000
     );
 
@@ -1009,416 +1332,638 @@ function createHeart(){
 setInterval(createHeart,550);
 
 
+/* =========================
+   ELEMENTS
+========================= */
 
-/* elements */
-
-const anger=
+const anger =
 document.getElementById("anger");
 
-const love=
+const love =
 document.getElementById("love");
 
-const sorry=
+const sorry =
 document.getElementById("sorry");
 
 const heartMessageInput =
-    document.getElementById("heartMessage");
+document.getElementById("heartMessage");
 
 const messageCount =
-    document.getElementById("messageCount");
+document.getElementById("messageCount");
 
-heartMessageInput.addEventListener("input", () => {
 
-    messageCount.innerText =
+/* =========================
+   MESSAGE COUNTER
+========================= */
+
+heartMessageInput.addEventListener(
+    "input",
+    () => {
+
+        messageCount.innerText =
         heartMessageInput.value.length;
 
-});
-
-/* anger */
-
-anger.addEventListener("input",()=>{
-
-    const value=anger.value;
-
-    document
-    .getElementById("angerScore")
-    .innerText=value+"/10";
+    }
+);
 
 
-    let message;
+/* =========================
+   ANGER
+========================= */
 
-    if(value<=2){
+anger.addEventListener(
+    "input",
+    () => {
 
-        message="Awww 😭 almost no gussa!";
+        const value =
+        anger.value;
+
+        document
+        .getElementById("angerScore")
+        .innerText =
+        value + "/10";
+
+
+        let message;
+
+
+        if(value <= 2){
+
+            message =
+            "Awww 😭 almost no gussa!";
+
+        }
+
+        else if(value <= 4){
+
+            message =
+            "Thoda gussa acceptable hai 🥺";
+
+        }
+
+        else if(value <= 6){
+
+            message =
+            "Hmm... ab mujhe manana padega 😭";
+
+        }
+
+        else if(value <= 8){
+
+            message =
+            "OH NO 😭 situation serious hai!";
+
+        }
+
+        else{
+
+            message =
+            "PRIYA PLEASE 😭🔥";
+
+        }
+
+
+        document
+        .getElementById("angerReaction")
+        .innerText =
+        message;
 
     }
-
-    else if(value<=4){
-
-        message="Thoda gussa acceptable hai 🥺";
-
-    }
-
-    else if(value<=6){
-
-        message="Hmm... ab mujhe manana padega 😭";
-
-    }
-
-    else if(value<=8){
-
-        message="OH NO 😭 situation serious hai!";
-
-    }
-
-    else{
-
-        message="PRIYA PLEASE 😭🔥";
-
-    }
-
-    document
-    .getElementById("angerReaction")
-    .innerText=message;
-
-});
+);
 
 
+/* =========================
+   LOVE
+========================= */
 
-/* love */
+love.addEventListener(
+    "input",
+    () => {
 
-love.addEventListener("input",()=>{
+        const value =
+        love.value;
 
-    const value=love.value;
+        document
+        .getElementById("loveScore")
+        .innerText =
+        value + "/10";
 
-    document
-    .getElementById("loveScore")
-    .innerText=value+"/10";
+
+        let message;
 
 
-    let message;
+        if(value <= 2){
 
-    if(value<=2){
+            message =
+            "😭 Ye number dekh ke dil toot gaya.";
 
-        message="😭 Ye number dekh ke dil toot gaya.";
+        }
 
-    }
+        else if(value <= 4){
 
-    else if(value<=4){
+            message =
+            "Thoda sa love abhi bhi bacha hai 🥺";
 
-        message="Thoda sa love abhi bhi bacha hai 🥺";
+        }
 
-    }
+        else if(value <= 6){
 
-    else if(value<=6){
+            message =
+            "Okay... chances abhi alive hain 👀";
 
-        message="Okay... chances abhi alive hain 👀";
+        }
 
-    }
+        else if(value <= 8){
 
-    else if(value<=8){
+            message =
+            "Okayyy ❤️ this is making me smile.";
 
-        message="Okayyy ❤️ this is making me smile.";
+        }
+
+        else{
+
+            message =
+            "10/10?! I'M THE LUCKIEST 😭❤️";
+
+        }
+
+
+        document
+        .getElementById("loveReaction")
+        .innerText =
+        message;
 
     }
+);
 
-    else{
 
-        message="10/10?! I'M THE LUCKIEST 😭❤️";
+/* =========================
+   SORRY
+========================= */
+
+sorry.addEventListener(
+    "input",
+    () => {
+
+        const value =
+        sorry.value;
+
+        document
+        .getElementById("sorryScore")
+        .innerText =
+        value + "/10";
+
+
+        let message;
+
+
+        if(value <= 2){
+
+            message =
+            "😭 Sorry almost reject ho gayi.";
+
+        }
+
+        else if(value <= 4){
+
+            message =
+            "Application under review... 🥲";
+
+        }
+
+        else if(value <= 6){
+
+            message =
+            "Negotiation chal rahi hai 😭";
+
+        }
+
+        else if(value <= 8){
+
+            message =
+            "Okayyy, thodi forgiveness mil gayi ❤️";
+
+        }
+
+        else{
+
+            message =
+            "FULL FORGIVENESS?! 😭❤️🎉";
+
+        }
+
+
+        document
+        .getElementById("sorryReaction")
+        .innerText =
+        message;
 
     }
-
-    document
-    .getElementById("loveReaction")
-    .innerText=message;
-
-});
+);
 
 
-
-/* sorry */
-
-sorry.addEventListener("input",()=>{
-
-    const value=sorry.value;
-
-    document
-    .getElementById("sorryScore")
-    .innerText=value+"/10";
-
-
-    let message;
-
-    if(value<=2){
-
-        message="😭 Sorry almost reject ho gayi.";
-
-    }
-
-    else if(value<=4){
-
-        message="Application under review... 🥲";
-
-    }
-
-    else if(value<=6){
-
-        message="Negotiation chal rahi hai 😭";
-
-    }
-
-    else if(value<=8){
-
-        message="Okayyy, thodi forgiveness mil gayi ❤️";
-
-    }
-
-    else{
-
-        message="FULL FORGIVENESS?! 😭❤️🎉";
-
-    }
-
-    document
-    .getElementById("sorryReaction")
-    .innerText=message;
-
-});
-
-
-
-/* submit */
+/* =========================
+   SUBMIT RATING
+========================= */
 
 async function submitRating(){
 
-    const a = Number(anger.value);
-    const l = Number(love.value);
-    const s = Number(sorry.value);
+    const a =
+    Number(anger.value);
+
+    const l =
+    Number(love.value);
+
+    const s =
+    Number(sorry.value);
+
     const heartMessage =
-    document.getElementById("heartMessage").value.trim();
+    heartMessageInput.value.trim();
 
-    if (!heartMessage) {
 
-    const messageBox =
-        document.getElementById("heartMessage");
+    /*
+       MESSAGE REQUIRED
+    */
 
-    messageBox.focus();
+    if(!heartMessage){
 
-    messageBox.placeholder =
-        "Please pehle dil ki baat likho... 🥺❤️";
+        document
+        .getElementById("warningPopup")
+        .classList.add("show");
 
-    messageBox.style.border =
-        "2px solid #d85c82";
-
-    messageBox.style.boxShadow =
-        "0 0 0 4px rgba(216,92,130,.12)";
-
-    setTimeout(() => {
-
-        messageBox.style.border =
-            "1px solid rgba(255,255,255,.9)";
-
-        messageBox.style.boxShadow =
-            "inset 0 2px 10px rgba(150,60,90,.05)";
-
-    }, 2500);
-
-    return;
-}
-
-    const submitButton = document.querySelector(".submit");
-
-    submitButton.disabled = true;
-    submitButton.innerText = "Sending your rating... 💌";
-
-    const formData = new FormData();
-
-    formData.append("Gussa Rating", `${a}/10`);
-    formData.append("Love Rating", `${l}/10`);
-    formData.append("Sorry Acceptance", `${s}/10`);
-    formData.append(
-    "Priya's Message",
-    heartMessage || "No message written."
-);
-
-    formData.append(
-    "Message",
-    `Priya's rating:
-Gussa: ${a}/10
-Love: ${l}/10
-Sorry Acceptance: ${s}/10
-
-Message from her heart:
-${heartMessage || "No message written."}`
-);
-
-    try {
-
-        const response = await fetch(
-            "https://formspree.io/f/xbglyzen",
-            {
-                method: "POST",
-                body: formData,
-                headers: {
-                    "Accept": "application/json"
-                }
-            }
-        );
-
-        if (!response.ok) {
-            throw new Error("Form submission failed");
-        }
-
-        // Existing result section
-        document.getElementById("finalAnger").innerText = a;
-        document.getElementById("finalLove").innerText = l;
-        document.getElementById("finalSorry").innerText = s;
-
-        const result = document.getElementById("result");
-
-        const emoji =
-            document.getElementById("resultEmoji");
-
-        const title =
-            document.getElementById("resultTitle");
-
-        const text =
-            document.getElementById("resultText");
-
-        result.classList.add("show");
-
-        if (s >= 8 && l >= 8) {
-
-            emoji.innerText = "😭❤️🎉";
-
-            title.innerText = "I'M FORGIVEN!";
-
-            text.innerText =
-                "Okay Priya... you just made my day. 🥺❤️ Thank you for still having so much love for me.";
-
-            confetti();
-
-        }
-
-        else if (s >= 6 && l >= 6) {
-
-            emoji.innerText = "🥺💗";
-
-            title.innerText = "There Is Still Hope!";
-
-            text.innerText =
-                "Officially fully forgiven nahi hua... but I can see some hope. 😭❤️";
-
-            confetti();
-
-        }
-
-        else if (a >= 8) {
-
-            emoji.innerText = "😭🙏";
-
-            title.innerText =
-                "BHAI... I'M IN TROUBLE";
-
-            text.innerText =
-                "Itna gussa?! 😭 Ab mujhe seriously tumhe manana padega.";
-
-        }
-
-        else {
-
-            emoji.innerText = "🥺👉👈";
-
-            title.innerText = "I'll Try Harder";
-
-            text.innerText =
-                "Rating received. No arguments. Bas ek aur sorry: I'm genuinely sorry, Priya. ❤️";
-
-        }
-
-        submitButton.innerText = "Rating Submitted ❤️";
-
-        result.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
+        return;
 
     }
 
-    catch (error) {
+
+    const submitButton =
+    document.getElementById("submitButton");
+
+
+    submitButton.disabled = true;
+
+    submitButton.innerText =
+    "Sending your rating... 💌";
+
+
+    /*
+       FORMSPREE
+    */
+
+    const formData =
+    new FormData();
+
+
+    formData.append(
+        "Gussa Rating",
+        `${a}/10`
+    );
+
+
+    formData.append(
+        "Love Rating",
+        `${l}/10`
+    );
+
+
+    formData.append(
+        "Sorry Acceptance",
+        `${s}/10`
+    );
+
+
+    formData.append(
+        "Priya's Message",
+        heartMessage
+    );
+
+
+    formData.append(
+        "Message",
+
+        `Priya's rating:
+
+Gussa: ${a}/10
+
+Love: ${l}/10
+
+Sorry Acceptance: ${s}/10
+
+
+Message from her heart:
+
+${heartMessage}`
+    );
+
+
+    try{
+
+
+        const response =
+        await fetch(
+            "https://formspree.io/f/mrpzwbqn",
+            {
+
+                method:"POST",
+
+                body:formData,
+
+                headers:{
+                    "Accept":
+                    "application/json"
+                }
+
+            }
+        );
+
+
+        if(!response.ok){
+
+            throw new Error(
+                "Form submission failed"
+            );
+
+        }
+
+
+        /*
+           SHOW RESULT
+        */
+
+        document
+        .getElementById("finalAnger")
+        .innerText = a;
+
+
+        document
+        .getElementById("finalLove")
+        .innerText = l;
+
+
+        document
+        .getElementById("finalSorry")
+        .innerText = s;
+
+
+        const result =
+        document.getElementById("result");
+
+
+        const emoji =
+        document.getElementById("resultEmoji");
+
+
+        const title =
+        document.getElementById("resultTitle");
+
+
+        const text =
+        document.getElementById("resultText");
+
+
+        result.classList.add("show");
+
+
+        /*
+           RESULT CONDITIONS
+        */
+
+        if(s >= 8 && l >= 8){
+
+            emoji.innerText =
+            "😭❤️🎉";
+
+            title.innerText =
+            "I'M FORGIVEN!";
+
+            text.innerText =
+            "Okay Priya... you just made my day. 🥺❤️ Thank you for still having so much love for me.";
+
+            confetti();
+
+        }
+
+        else if(s >= 6 && l >= 6){
+
+            emoji.innerText =
+            "🥺💗";
+
+            title.innerText =
+            "There Is Still Hope!";
+
+            text.innerText =
+            "Officially fully forgiven nahi hua... but I can see some hope. 😭❤️";
+
+            confetti();
+
+        }
+
+        else if(a >= 8){
+
+            emoji.innerText =
+            "😭🙏";
+
+            title.innerText =
+            "BHAI... I'M IN TROUBLE";
+
+            text.innerText =
+            "Itna gussa?! 😭 Ab mujhe seriously tumhe manana padega.";
+
+        }
+
+        else{
+
+            emoji.innerText =
+            "🥺👉👈";
+
+            title.innerText =
+            "I'll Try Harder";
+
+            text.innerText =
+            "Rating received. No arguments. Bas ek aur sorry: I'm genuinely sorry, Priya. ❤️";
+
+        }
+
+
+        submitButton.innerText =
+        "Rating Submitted ❤️";
+
+
+        result.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+
+    }
+
+    catch(error){
 
         console.error(error);
 
-        submitButton.disabled = false;
+
+        submitButton.disabled =
+        false;
+
 
         submitButton.innerText =
-            "💌 Submit My Honest Rating";
+        "💌 Submit My Honest Rating";
+
 
         alert(
             "Oops 😭 rating submit nahi hui. Internet connection check karke dobara try karo."
         );
 
     }
+
 }
 
 
-/* confetti */
+/* =========================
+   WARNING POPUP CLOSE
+========================= */
+
+function closeWarning(){
+
+    document
+    .getElementById("warningPopup")
+    .classList.remove("show");
+
+
+    heartMessageInput.focus();
+
+}
+
+
+/* =========================
+   CLICK OUTSIDE POPUP
+========================= */
+
+document
+.getElementById("warningPopup")
+.addEventListener(
+    "click",
+    function(event){
+
+        if(event.target === this){
+
+            closeWarning();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   ESCAPE CLOSE
+========================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            closeWarning();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   CONFETTI
+========================= */
 
 function confetti(){
 
     for(let i=0;i<60;i++){
 
-        setTimeout(()=>{
+        setTimeout(
+            () => {
 
-            const item=
-            document.createElement("div");
-
-            item.innerText=
-            ["❤️","💗","✨","💕","🎉","💖"]
-            [Math.floor(Math.random()*6)];
-
-            item.style.position="fixed";
-
-            item.style.left=
-            Math.random()*100+"vw";
-
-            item.style.top="-30px";
-
-            item.style.fontSize=
-            15+Math.random()*20+"px";
-
-            item.style.zIndex="999";
-
-            item.style.transition=
-            "transform 2.5s linear, opacity 2.5s";
-
-            document.body.appendChild(item);
+                const item =
+                document.createElement("div");
 
 
-            setTimeout(()=>{
+                item.innerText =
+                [
+                    "❤️",
+                    "💗",
+                    "✨",
+                    "💕",
+                    "🎉",
+                    "💖"
+                ][
+                    Math.floor(
+                        Math.random()*6
+                    )
+                ];
 
-                item.style.transform=
-                `translateY(110vh) rotate(${Math.random()*600}deg)`;
 
-                item.style.opacity="0";
-
-            },50);
+                item.style.position =
+                "fixed";
 
 
-            setTimeout(
-                ()=>item.remove(),
-                3000
-            );
+                item.style.left =
+                Math.random()*100+"vw";
 
-        },i*40);
+
+                item.style.top =
+                "-30px";
+
+
+                item.style.fontSize =
+                15 + Math.random()*20+"px";
+
+
+                item.style.zIndex =
+                "999";
+
+
+                item.style.transition =
+                "transform 2.5s linear, opacity 2.5s";
+
+
+                document
+                .body
+                .appendChild(item);
+
+
+                setTimeout(
+                    () => {
+
+                        item.style.transform =
+                        `translateY(110vh) rotate(${Math.random()*600}deg)`;
+
+                        item.style.opacity =
+                        "0";
+
+                    },
+                    50
+                );
+
+
+                setTimeout(
+                    () => item.remove(),
+                    3000
+                );
+
+
+            },
+            i*40
+        );
 
     }
 
 }
 
 
-
-/* reset */
+/* =========================
+   RESET
+========================= */
 
 function resetRating(){
 
@@ -1426,13 +1971,29 @@ function resetRating(){
     .getElementById("result")
     .classList.remove("show");
 
+
+    document
+    .getElementById("submitButton")
+    .disabled = false;
+
+
+    document
+    .getElementById("submitButton")
+    .innerText =
+    "💌 Submit My Honest Rating";
+
+
     window.scrollTo({
+
         top:0,
+
         behavior:"smooth"
+
     });
 
 }
 
 </script>
+
 </body>
 </html>
